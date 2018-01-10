@@ -1,0 +1,13 @@
+<div class="card text-center mb-3 bg-light">
+  <div class="card-header">
+    <%= coupon.provinces.pluck(:name).join ", " %>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%= coupon.vehicles.pluck(:name).join ", " %></h5>
+    <p class="card-text"><%= coupon.note %></p>
+    <span class="btn btn-primary"><%= coupon.code %></span>
+  </div>
+  <div class="card-footer text-muted">
+    <%= coupon.condition || "No condition" %>
+  </div>
+</div>
